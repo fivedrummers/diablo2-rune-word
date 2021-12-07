@@ -81,7 +81,7 @@ public class RunWordServiceImpl extends ServiceImpl<RuneWordMapper, RuneWord> im
             String text = switch (runeWordAttributesDto.getAttributeType()) {
                 case VALUE -> desc + (valueStr.startsWith("-") ? " " + valueStr : " +" + valueStr);
                 case PERCENTAGE -> desc + " +" + valueStr + "%";
-                case AMOUNT -> desc + " (" + valueStr + "次充能)";
+                case AMOUNT -> desc + " (" + valueStr + "次充能）";
                 case NON_LINEAR_PERCENTAGE -> valueStr + "% 几率" + desc;
                 case COEFFICIENT -> desc + " +" + valueStr + "(依角色等级而定) [" +
                         runeWordAttributesDto.getValue().stripTrailingZeros().toPlainString() + " * 等级]";
